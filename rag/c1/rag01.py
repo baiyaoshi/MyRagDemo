@@ -55,6 +55,8 @@ llm = ChatOpenAI(
     base_url=os.getenv("DASHSCOPE_BASE_URL")
 )
 
+print(docs_content)
+
 answer = llm.invoke(prompt.format(context=docs_content,question=question))
 print(answer.content)
 
